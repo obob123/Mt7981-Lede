@@ -27,6 +27,7 @@ on:
           - nokia_ea0326gmp
           - jcg_q30-pro
           - xiaomi_redmi-router-ax6000-ubootmod
+          - ax3000t-stock.config
 
       repo_url:
         description: '源码仓库地址（ImmortalWrt）'
