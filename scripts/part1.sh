@@ -263,16 +263,16 @@ esac
 echo "==== [3/5] 安全写入自定义 Feeds ===="
 
 cat >> feeds.conf.default <<EOF
-src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall
-src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages
-src-git openclash https://github.com/vernesong/OpenClash
+# src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall
+# src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages
+# src-git openclash https://github.com/vernesong/OpenClash
 src-git luci_theme_argon https://github.com/jerrykuku/luci-theme-argon
 EOF
 
 echo ">>> 自定义 Feeds:"
-echo "    PassWall"
-echo "    PassWall Packages"
-echo "    OpenClash"
+# echo "    PassWall"
+# echo "    PassWall Packages"
+# echo "    OpenClash"
 echo "    Argon Theme"
 
 #=================================================
@@ -370,37 +370,37 @@ echo ">>> 不在 Runner 上执行 ARM64 clash_meta"
 # 安装到 OpenClash 核心目录
 #=================================================
 
-echo "==== 安装 Mihomo 到 OpenClash 核心目录 ===="
+# echo "==== 安装 Mihomo 到 OpenClash 核心目录 ===="
 
-mkdir -p \
-  "${SRC_DIR}/files/etc/openclash/core"
+# mkdir -p \
+  # "${SRC_DIR}/files/etc/openclash/core"
 
-cp \
-  "${SRC_DIR}/clash_meta" \
-  "${SRC_DIR}/files/etc/openclash/core/clash_meta"
+# cp \
+  # "${SRC_DIR}/clash_meta" \
+  # "${SRC_DIR}/files/etc/openclash/core/clash_meta"
 
-chmod 0755 \
-  "${SRC_DIR}/files/etc/openclash/core/clash_meta"
+# chmod 0755 \
+  # "${SRC_DIR}/files/etc/openclash/core/clash_meta"
 
 
 #=================================================
 # 检查 OpenClash Meta 核心
 #=================================================
 
-echo "==== 检查 OpenClash Meta 核心 ===="
+# echo "==== 检查 OpenClash Meta 核心 ===="
 
-if [ ! -f "${SRC_DIR}/files/etc/openclash/core/clash_meta" ]; then
-    echo "ERROR: OpenClash Meta 核心安装失败"
-    exit 1
-fi
+# if [ ! -f "${SRC_DIR}/files/etc/openclash/core/clash_meta" ]; then
+   #  echo "ERROR: OpenClash Meta 核心安装失败"
+   #  exit 1
+# fi
 
-echo ">>> OpenClash Meta 核心:"
-ls -lh \
-  "${SRC_DIR}/files/etc/openclash/core/clash_meta"
+# echo ">>> OpenClash Meta 核心:"
+# ls -lh \
+  # "${SRC_DIR}/files/etc/openclash/core/clash_meta"
 
-echo ">>> 核心架构:"
-file \
-  "${SRC_DIR}/files/etc/openclash/core/clash_meta"
+# echo ">>> 核心架构:"
+# file \
+ #  "${SRC_DIR}/files/etc/openclash/core/clash_meta"
 
 echo "==== Mihomo Meta 核心准备完成 ===="
 
